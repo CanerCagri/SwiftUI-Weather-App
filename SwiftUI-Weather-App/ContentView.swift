@@ -22,7 +22,7 @@ struct ContentView: View {
             BackGroundView(isNight: isNight)
             VStack {
                 CityName(cityName: "Fatih, Istanbul")
-                WeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 35)
+                WeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: isNight ? 21 : 35)
                 
                 HStack(spacing: 20) {
                     ForEach (weatherDays, id: \.id) { weather in
